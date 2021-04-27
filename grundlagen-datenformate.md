@@ -366,7 +366,7 @@ Datenformat: Menge von Daten mit einigen Beschränkungen und Freiheitsgraden
     "name":  { "type": "string" },
     "dates": {
       "type": "string",
-      "pattern": "^[0-9]{4}(-[0-9]{4})?$",
+      "pattern": "^[0-9]{4}(-[0-9]{4})?$"
     }
   }
 }
@@ -374,32 +374,129 @@ Datenformat: Menge von Daten mit einigen Beschränkungen und Freiheitsgraden
 
 Reguläre Ausdrücke: Schemas für Zeichenketten
 
+## Übung im JSON-Editor (ohne beta!)
+
+<https://jsoneditoronline.org/>
+
+Options > JSON Schema > Url:
+
+<https://raw.githubusercontent.com/jakobib/diniagkim2021/main/json-schema.json>
+
+Aufgabe: 
+
+1. Validieren Sie das Beispiel-Dokument
+2. Ändern Sie das Dokument so, dass es keine Syntaxfehler hat aber dem Schema nicht mehr entspricht
+
+## Feedback
+
+...
+
+## Übung: Finde die Fehler
+
+Menti-Code 4936 6360 oder <https://www.menti.com/5r2gnu61md>
+
+~~~
+{
+  "name": "Douglas NoÃ«l Adams"
+  "dates" "1952-2001",
+}
+~~~
+
+*Wo sind Fehler und auf welcher Datenebene?*
+
+## Übung: Finde die Fehler
+
+~~~json
+{
+  "name": "Kari Nordmann",
+  "date": "1942-2019 ",
+  "age": "76" 
+}
+~~~
+
+*Wo sind Fehler und auf welcher Datenebene?*
+
+## Wann ist ein Datensatz korrekt?
+
+* Syntax (kaputt oder nicht kaputt)
+
+* Struktur (valide oder fehlerhaft)
+
+* Inhalt (tja...)
+
+## Was kann ein Datenformat festlegen?
+
+* Syntax: Datenstrukturierungssprachen
+
+* Struktur: Mittels Schemas
+
+* Inhalt: Standards und Erfassungsregeln (nicht vollautomatisierbar)
+
+# Abfragesprachen
+
+## Was sind Abfragesprachen?
+
+* Kleine Datenformate ("Sprachen") um Abfragen zu formulieren
+
+* Ergebnis: Teilmenge von vorhandenen Daten
+
+* Abfragen über eine Datenstrukturierungssprache
+
+    * XPath für XML-Daten
+
+    * SPARQL für RDF-Daten
+
+    * SQL für Relationale Datenbanken
+
+    * ...
+
+## Praktisches Beispiel: Abfrage von JSON-Daten
+
+<https://jqplay.org/>
 
 # Zusammenfassung
 
 ## Daten entschlüsseln
 
 * Verschiedene Sichten auf Daten sind möglich und relevant
+
     * Fakten vs. Beobachtungen vs. Dokumente
+
     * Inhalt vs. Struktur vs. Kontext
-    * Kodierungsebenen
+
+    * Kodierungsebenen (z.B. Bytes, Struktur, Format...)
+
 * Erfahrung im Umgang mit Datenformaten (Data Literacy)
 
-## Grammatik der Datenformate
+## Datenstrukturierungssprachen
+
+...
+
+## Daten-Schemas
+
+...
+
+## Abfragesprachen
 
 ...
 
 ## Allgemeine Datenwerkzeuge
 
 * **Erstellung:** Editoren
+
 * **Validierung:** Validatoren (Syntax- & Schema-Ebene)
-* **Abfrage:** ...
+
+* **Abfrage:** Abfragesprachen, Datenbanken...
 
 ## Mehr zu Datenformaten...
 
 Übung macht die Meister:in!
 
 <https://format.gbv.de>
+
+## Feedback
+
+Bitte Feedback zur Veranstaltung!
 
 # Anhang
 
