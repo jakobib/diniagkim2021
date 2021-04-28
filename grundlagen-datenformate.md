@@ -5,7 +5,6 @@ author: Jakob Voß
 date: 28\. April 2021
 classoption:
   - aspectratio=169
-#theme: Boadilla
 language: de
 ---
 
@@ -450,9 +449,19 @@ Menti-Code 4936 6360 oder <https://www.menti.com/5r2gnu61md>
 
     * ...
 
-## Praktisches Beispiel: Abfrage von JSON-Daten
+* APIs sind oder beinhalten ebenfalls Abfragesprachen
 
-<https://jqplay.org/>
+## Abfrage von JSON-Daten
+
+Verschiedene Abfragesprachen und Möglichkeiten (leider keine vollständig etabliert)
+
+* JSON Path
+* JSON Pointer
+* jq
+* ...
+
+
+Übung: <https://jqplay.org/>
 
 # Zusammenfassung
 
@@ -470,15 +479,48 @@ Menti-Code 4936 6360 oder <https://www.menti.com/5r2gnu61md>
 
 ## Datenstrukturierungssprachen
 
-...
+* JSON, XML, CSV, RDF...
+
+* Stellen Elemente zur Strukturierung bereit\
+  z.B. Zeichenketten, Verschachtelung, Key-Value-Paare...
+
+* Folgen eigenen Paradigmen\
+  z.B. Tabelle, Baustruktur, Graph...
+
+* Eigenes Ökysystem von Werkzeugen z.B. Editoren
+
+* Sagen nichts über konkretes Format und Inhalt aus
 
 ## Daten-Schemas
 
-...
+* Formale Standards was in einem Format erlaubt und erfordert ist
+
+* Schemasprachen für jeweilige Strukturierungssprachen
+
+    * XML Schema (XSD) für XML
+
+    * JSON Schema für JSON
+
+    * Avram für MARC/PICA
+
+    * ...
+
+* Ermöglichen automatische Validierung
+
+* Ohne Validierung sind Fehler vorprogrammiert!
 
 ## Abfragesprachen
 
-...
+* Teilmenge von Date in einer Datenstrukturierungssprache
+
+* Geht mit jeder Programmiersprache, besser zielgerichtete Sprachen
+
+    * XPath für XML
+    
+    * jq oder JSON Pointer für JSON
+    
+    * ...
+
 
 ## Allgemeine Datenwerkzeuge
 
@@ -498,23 +540,31 @@ Menti-Code 4936 6360 oder <https://www.menti.com/5r2gnu61md>
 
 Bitte Feedback zur Veranstaltung!
 
+<http://etherpad.lobid.org/p/kimws21-Feedback-Hands-On-Tutorial_Datenformate>
+
 # Anhang
 
 ## Wo kommt die Antilope her?
 
 ::: columns
 :::: column
-![<https://doi.org/10.11588/diglit.3218#0197>](./img/antilope.jpg){height=80%}
+![](./img/antilope.jpg){height=70%}
 ::::
 :::: column
 Bertuch & Bertuch (1824): Bilderbuch für Kinder, Band 11, Seite 195
+
+<https://doi.org/10.11588/diglit.3218#0197>
 ::::
 :::
 
 ## Wo kommt die Antilope her?
 
-Antilope per IIIF
+International Image Interoperability Framework (IIIF)
 
+Datenformat für Metadaten (Seitenaufteilung etc.):
 <https://digi.ub.uni-heidelberg.de/diglit/iiif/bertuch1824bd11/manifest.json>
 
+Abfrageformat IIIF Image API
 <https://digi.ub.uni-heidelberg.de/iiif/2/bertuch1824bd11%3A195.jpg/1150,1450,790,850/790,/0/default.jpg>
+
+`{scheme}://{server}{/prefix}/{identifier}/{region}/{size}/{rotation}/{quality}.{format}`
